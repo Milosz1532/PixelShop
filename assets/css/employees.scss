@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.employees-box-title {
+	color: #8f8f8f;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+.employees-box-button {
+	display: flex;
+	align-items: center;
+	// vertical-align: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	h5 {
+		margin-top: 15px;
+	}
+
+	.addEmployees {
+		background-color: #1464a9;
+		color: #fff;
+		border: none;
+		padding: 7px 15px 7px 15px;
+		border-radius: 20px;
+		font-size: 14px;
+		opacity: 0.8;
+		transition: all 0.5s;
+		.material-icons {
+			vertical-align: middle;
+			font-size: 16px;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.employees-box {
+	padding: 15px;
+	// margin-bottom: 15px;
+	// background-color: #fff;
+	border-radius: 13px;
+	// -webkit-box-shadow: 0px 3px 20px 0px rgba(143, 145, 154, 1);
+	// -moz-box-shadow: 0px 3px 20px 0px rgba(143, 145, 154, 1);
+	// box-shadow: 0px 3px 20px 0px rgba(143, 145, 154, 1);
+
+	.user-box {
+		position: relative;
+		text-align: center;
+		padding: 0px 20px 0px 20px;
+		margin-bottom: 30px;
+		.box {
+			background-color: #fff;
+			border-radius: 20px;
+			padding: 20px;
+
+			-webkit-box-shadow: 0px 3px 20px 0px rgba(143, 145, 154, 1);
+			-moz-box-shadow: 0px 3px 20px 0px rgba(143, 145, 154, 1);
+			box-shadow: 0px 3px 20px 0px rgba(143, 145, 154, 1);
+			height: 100%;
+			.icon {
+				position: relative;
+				width: 80px;
+				height: 80px;
+				margin: auto;
+				border-radius: 50%;
+				background-color: #1464a9;
+				&.deleted {
+					background-color: #8f8f8f !important;
+					padding: 50px;
+					color: red;
+				}
+				span {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					text-align: center;
+					font-size: 25px;
+					font-weight: bold;
+					color: #fff;
+				}
+			}
+			.content {
+				margin-top: 10px;
+				font-size: 17px;
+
+				.username {
+					margin: 0;
+					font-weight: bold;
+				}
+
+				.accountType {
+					margin-top: 2px;
+					padding: 0;
+					font-size: 11px;
+				}
+
+				button {
+					border: 1px dashed #1464a9;
+					background-color: #fff;
+					color: #8f8f8f;
+					border-radius: 5px;
+					text-transform: uppercase;
+					font-size: 15px;
+					padding: 8px 20px 8px 20px;
+					transition: all 0.4s;
+					margin-top: 10px;
+					cursor: pointer;
+					&:hover {
+						background-color: #1464a9;
+						border: 1px dashed #fff;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+#deleteAccount {
+	background-color: #fff;
+	color: #1464a9;
+}
+
+@media screen and (max-width: 715px) {
+	.buttons {
+		display: block !important;
+		button {
+			width: 100%;
+			margin-top: 10px;
+		}
+	}
+}
+
+// Config Employees

@@ -1,0 +1,339 @@
+.customers-box-button {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.customers-box-title {
+		color: #8f8f8f;
+		text-transform: uppercase;
+		font-size: 15px;
+		margin-top: 15px;
+	}
+
+	.addCustomer {
+		background-color: #1464a9;
+		color: #fff;
+		border: none;
+		padding: 7px 15px 7px 15px;
+		border-radius: 20px;
+		font-size: 14px;
+		opacity: 0.8;
+		transition: all 0.5s;
+		.material-icons {
+			vertical-align: middle;
+			font-size: 16px;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.customers-box {
+	background-color: #fff;
+	border-radius: 10px;
+	// padding: 40px;
+	padding: 10px 0px 40px 0px;
+	-webkit-box-shadow: 0px 3px 20px 0px rgba(143, 145, 154, 1);
+	-moz-box-shadow: 0px 3px 20px 0px rgba(143, 145, 154, 1);
+	box-shadow: 0px 3px 20px 0px rgba(143, 145, 154, 1);
+}
+.table-box {
+	min-height: 200px;
+	max-height: 500px;
+	overflow: auto;
+	width: 100%;
+}
+
+.search {
+	position: relative;
+	width: 230px;
+	margin: 0 10px;
+	float: right;
+
+	label {
+		// display: flex;
+		position: relative;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+
+		input {
+			width: 100%;
+			height: 35px;
+			border-radius: 40px;
+			padding: 5px 20px;
+			outline: none;
+			padding-left: 35px;
+			font-size: 14px;
+			background-color: #f8f8f8;
+			border: 1px solid #acacac;
+		}
+		input:focus {
+			border: 1px solid #1464a9;
+		}
+
+		.material-icons {
+			position: absolute;
+			top: 7px;
+			left: 10px;
+			font-size: 20px;
+			color: #1464a9;
+		}
+	}
+}
+
+.table > thead > tr > th {
+	border-top: none !important;
+	color: #1464a9;
+}
+.customers-tbl {
+	color: #4d4d4d;
+	td > .buttons {
+		button,
+		a {
+			background: none;
+			justify-content: center;
+			border: none;
+			border-radius: 10px;
+			color: #1464a9;
+			opacity: 0.6;
+			transition: opacity 0.4s;
+			&:nth-child(2) {
+				margin-left: 5px;
+				color: tomato;
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	td > .status-buttons {
+		.button-tooltip {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			text-align: center; /* dodana właściwość */
+
+			.button-tooltip-text {
+				position: absolute;
+				visibility: hidden;
+				background-color: rgb(125, 125, 125);
+				text-align: center;
+				border-radius: 6px;
+				padding: 5px;
+				font-size: 14px;
+				color: #fff;
+				top: 30px;
+				left: 50%; /* zmienione wartości */
+				transform: translateX(-50%); /* dodana wartość */
+				pointer-events: none;
+				z-index: 1000;
+				opacity: 0.9;
+				&::before {
+					content: '';
+					position: absolute;
+					left: 50%;
+					top: -5px;
+					transform: translateX(-50%); /* zmienione wartości */
+					width: 0;
+					height: 0;
+					border-left: 10px solid transparent;
+					border-right: 10px solid transparent;
+					border-bottom: 10px solid rgb(125, 125, 125);
+					clear: both;
+				}
+			}
+			&:hover {
+				.button-tooltip-text {
+					visibility: visible;
+				}
+			}
+			a {
+				background: none;
+				justify-content: center;
+				border: none;
+				border-radius: 10px;
+				color: #1464a9;
+				font-size: 18px;
+				opacity: 0.6;
+				transition: opacity 0.4s;
+				margin-left: 5px;
+
+				&.status-1 {
+					color: #ea502e;
+				}
+				&.status-2 {
+					color: #eaae2e;
+				}
+				&.status-3 {
+					color: #c8ea2e;
+				}
+				&.status-4 {
+					color: #6aea2e;
+				}
+				&.status-5 {
+					color: #1464a9;
+				}
+				&:hover {
+					opacity: 1;
+				}
+			}
+			&.disabled {
+				a {
+					color: #4d4d4d;
+					opacity: 0.4;
+					cursor: auto;
+					pointer-events: none;
+				}
+				&:hover {
+					.button-tooltip-text {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+tr.customer-row,
+tr.customerOrder-row {
+	cursor: pointer;
+	transition: all 0.2s;
+	opacity: 0.9;
+	&:hover {
+		background-color: #f3f3f3;
+		opacity: 1;
+	}
+}
+
+.add-user-box {
+	.title {
+		font-size: 18px;
+		text-transform: uppercase;
+		color: #1464a9;
+	}
+	.cb-info {
+		font-size: 14px;
+		color: tomato;
+	}
+	background-color: #fff;
+	padding: 20px;
+	width: 320px;
+	position: fixed;
+	top: 0;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	border-radius: 12px;
+	visibility: hidden;
+	font-family: “Poppins”, sans-serif;
+	text-align: center;
+	z-index: 1000;
+	-webkit-box-shadow: 0px 3px 20px 0px rgba(143, 145, 154, 1);
+	-moz-box-shadow: 0px 3px 20px 0px rgba(143, 145, 154, 1);
+	box-shadow: 0px 3px 20px 0px rgba(143, 145, 154, 1);
+	scale: 0;
+	transition: all 0.4s;
+
+	.buttons {
+		position: relative;
+		margin-top: 20px;
+		button {
+			display: block;
+			width: 60%;
+			height: 40px;
+			border: 1px solid #8f8f8f;
+			border-radius: 20px;
+			// padding: 5px 15px 5px 15px;
+			color: #fff;
+			margin: auto;
+			margin-top: 8px;
+			background-color: #1464a9;
+			opacity: 0.6;
+			transition: opacity 0.4s;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&.active {
+		scale: 1;
+		visibility: visible;
+		transition: all 0.4s;
+	}
+
+	.config-input {
+		margin-bottom: 10px;
+		p {
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 0;
+			font-size: 14px;
+			color: #696969;
+		}
+		input {
+			width: 90%;
+			border: 1px solid #858585;
+			border-radius: 6px;
+			height: 40px;
+			margin: 0;
+			margin-top: 2px;
+			margin-left: -4px;
+			padding: 10px;
+
+			font-size: 16px;
+			color: #8f8f8f;
+			&:focus {
+				border: none;
+				outline: 2px solid #1464a9;
+				font-weight: bold;
+			}
+			&::placeholder {
+				color: #8f8f8f;
+				font-weight: 200;
+			}
+		}
+
+		input.form-control {
+			font-size: 10px;
+		}
+	}
+}
+
+.shadow {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: none;
+	z-index: 100;
+
+	&.active {
+		display: block;
+	}
+}
+
+.mode-buttons {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	button {
+		border-radius: 7px;
+		padding: 5px 15px 5px 15px;
+		height: 45px;
+		opacity: 0.7;
+		background-color: #fff;
+		color: #1464a9;
+		border: 1px solid #1464a9;
+		transition: opacity 0.4s;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
